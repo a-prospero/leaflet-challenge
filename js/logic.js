@@ -25,7 +25,7 @@ function createFeatures(earthquakeData) {
     pointToLayer: function (feature, pointLayer){
       return new L.circle(pointLayer, 
         {
-          radius: radiusSize(feature.properties.mag), fillColor: circleColor(feature.geometry.coordinates[2]), opacity: 10
+          radius: radiusSize(feature.properties.mag), fillColor: circleColor(feature.geometry.coordinates[2]), opacity: 0, fillOpacity: 0.8
         })
     },
     onEachFeature: onEachFeature
@@ -55,7 +55,7 @@ function circleColor(depth) {
     return "lightgreen"
   }
   else (depth) 
-    return "#edf8f"
+    return "green"
   
 }
 
